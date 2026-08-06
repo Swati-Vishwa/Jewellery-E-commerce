@@ -1,0 +1,14 @@
+.nav-item {
+  padding: 0 2px;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+
+.nav-item:hover {
+  background-color: #aa973926;
+  cursor: pointer;
+}
+
+.nav-item:active {
+  transform: scale(0.9);
+}

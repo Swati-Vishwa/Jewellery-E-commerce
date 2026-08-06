@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Aboreto&family=Caveat&family=Bodoni+Moda:wght@400&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap");
+@import "tailwindcss";
+
+
+@theme {
+  --font-aboreto: "Aboreto", serif;
+  --font-cormorant: "Cormorant Garamond", serif;
+  --font-bodoni: "Bodoni Moda", serif;
+  --font-caveat: "Caveat", serif;
+}
