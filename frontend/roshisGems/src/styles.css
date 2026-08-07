@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Aboreto&family=Caveat&family=Bodoni+Moda:wght@400&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aboreto&family=Alike&family=Caveat&family=Bodoni+Moda:wght@400&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap");
 @import "tailwindcss";
 
 
@@ -7,4 +7,13 @@
   --font-cormorant: "Cormorant Garamond", serif;
   --font-bodoni: "Bodoni Moda", serif;
   --font-caveat: "Caveat", serif;
+  --font-alike: "Alike", serif;
+}
+
+@theme {
+  --color-light-orange: #fffbf4;
+  --color-light-yellow: #fffded;
+  --color-grey-olive: #aa9839;
+  --color-grey-orange: #b5996f;
+  --color-light-grey: #e0e0de;
 }
