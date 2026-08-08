@@ -1,6 +1,19 @@
-<div class="relative w-70 h-40 text-grey-orange flex flex-col gap-2 overflow-hidden">
-  <img src="/images/img3.jpeg" alt="" class="absolute inset-0 top-0 left-0 w-full h-full object-cover object-[70%_50%]">
+<div class="relative w-56 h-40 flex flex-col gap-2 overflow-hidden rounded-2xl shadow-md shadow-grey-orange/30">
+  <img [src]="collectionItems().image" [alt]="collectionItems().altText"
+    class="absolute inset-0 top-0 left-0 w-full h-full object-cover object-[70%_60%]">
 
   <!-- overlay -->
-  <div class="absolute inset-0 bg-linear-to-r from-light-orange/50 to-transparent"></div>
+  <div class="absolute inset-0 bg-linear-to-r from-light-orange from-10% to-60% to-transparent"></div>
+
+  <!-- content -->
+  <div class="relative top-0 left-0 z-20 w-34 h-35 p-2 flex flex-col justify-between">
+    <div>
+      <h4 class="text-xl font-alike">{{collectionItems().title}}</h4>
+      <p class="text-grey-brown">{{collectionItems().detail}}</p>
+    </div>
+    <a [routerLink]="collectionItems().routeLink" class="viewLink flex items-center">
+      View 
+      <mat-icon class="!text-base">arrow_outwards</mat-icon>
+    </a>
+  </div>
 </div>

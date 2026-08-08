@@ -1,9 +1,13 @@
-<section class="w-full h-90 bg-light-orange flex flex-col justify-center items-center gap-10">
+<section class="w-full h-80 bg-light-orange flex flex-col justify-center items-center gap-10">
   <div class="flex flex-col gap-2 items-center">
     <h2 class="text-5xl text-grey-orange font-alike">Our Collection</h2>
     <div class="w-100 h-0.5 bg-grey-orange"></div>
   </div>
-  <div class="flex justify-between gap-16">
-    <app-collection-card></app-collection-card>
+  <div class="flex justify-between gap-6">
+    @for (item of collectionItem; track $index) {
+      <app-collection-card
+        [collectionItems]="item" 
+      ></app-collection-card>
+    }
   </div>
 </section>

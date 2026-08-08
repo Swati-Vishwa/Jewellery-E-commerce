@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Aboreto&family=Alike&family=Caveat&family=Bodoni+Moda:wght@400&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap");
 @import "tailwindcss";
 
+mat-icon {
+  font-family: 'Material Icons' ;
+}
+
 
 @theme {
   --font-aboreto: "Aboreto", serif;
@@ -16,4 +20,5 @@
   --color-grey-olive: #aa9839;
   --color-grey-orange: #b5996f;
   --color-light-grey: #e0e0de;
+  --color-grey-brown: #79624b;
 }

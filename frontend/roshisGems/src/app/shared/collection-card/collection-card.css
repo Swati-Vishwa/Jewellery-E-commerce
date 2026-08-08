@@ -1,0 +1,14 @@
+.viewLink{
+  position: relative;
+  color: var(--color-grey-brown);
+}
+
+.viewLink::after{
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  width: 43px;
+  height: 1px;
+  background-color: var(--color-grey-brown);
+}
