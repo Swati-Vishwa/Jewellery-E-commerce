@@ -3,6 +3,10 @@
   color: var(--color-grey-brown);
 }
 
+.viewLink:hover{
+  color: var(--color-grey-olive);
+}
+
 .viewLink::after{
   content: '';
   position: absolute;
@@ -11,4 +15,14 @@
   width: 43px;
   height: 1px;
   background-color: var(--color-grey-brown);
+}
+
+.viewLink:hover::after{
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  width: 43px;
+  height: 1px;
+  background-color: var(--color-grey-olive);
 }

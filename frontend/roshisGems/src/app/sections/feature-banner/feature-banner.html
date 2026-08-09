@@ -1,0 +1,7 @@
+<section class="w-full h-screen bg-light-orange flex justify-center items-center">
+  <div class="w-4/5 px-4">
+    @for (item of featureBannerData; track $index) {
+    <app-feature-img-card [FeatureImage]="item"></app-feature-img-card> }
+  </div>
+
+</section>

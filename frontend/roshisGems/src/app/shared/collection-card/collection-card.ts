@@ -16,4 +16,8 @@ export class CollectionCard {
     detail: string;
     routeLink: string;
   }>()
+
+  yay(){
+    alert("clicked")
+  }
 }
