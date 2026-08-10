@@ -1,7 +1,10 @@
-<section class="w-full h-screen bg-light-orange flex justify-center items-center">
-  <div class="w-4/5 px-4">
-    @for (item of featureBannerData; track $index) {
+<section class="w-full h-screen bg-light-orange flex justify-center items-center select-none">
+  <div class="w-5/6 px-4 flex justify-between items-center">
+    @for (item of featureBannerImageData; track $index) {
     <app-feature-img-card [FeatureImage]="item"></app-feature-img-card> }
-  </div>
 
+    @for (item of featureBannerAboutData; track $index) {
+    <app-about-us-card [aboutUs]="item"></app-about-us-card>
+    }
+  </div>
 </section>

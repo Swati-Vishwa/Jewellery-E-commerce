@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-about-us-card',
@@ -6,4 +6,9 @@ import { Component } from '@angular/core';
   templateUrl: './about-us-card.html',
   styleUrl: './about-us-card.css',
 })
-export class AboutUsCard {}
+export class AboutUsCard {
+  aboutUs = input.required<{
+    aboutTitle: string;
+    aboutDescription: string;
+  }>()
+}

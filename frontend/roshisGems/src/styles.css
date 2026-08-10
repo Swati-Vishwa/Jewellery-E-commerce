@@ -5,6 +5,9 @@ mat-icon {
   font-family: 'Material Icons' ;
 }
 
+*{
+  scroll-behavior: smooth;
+}
 
 @theme {
   --font-aboreto: "Aboreto", serif;
