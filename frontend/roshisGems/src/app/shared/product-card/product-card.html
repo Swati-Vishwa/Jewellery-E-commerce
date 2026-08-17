@@ -1,0 +1,19 @@
+<div class="w-full max-w-60 flex flex-col overflow-hidden">
+  <div class="w-full aspect-3/2 overflow-hidden">
+    <img [src]="product().image" [alt]="product().altText"
+      class="w-full h-full rounded-2xl object-cover object-[70%_60%] hover:opacity-95">
+  </div>
+  <div class="flex flex-col gap-3">
+
+    <div class="flex flex-col gap-1">
+      <h3 class="text-lg font-alike text-gray-500 truncate">{{product().name}}</h3>
+        <p class="text-2xl font-alike text-black pl-2">₹{{product().price}}</p>
+    </div>
+
+    <div class="flex justify-between items-center gap-3">
+      <app-add-to-cart-btn label="Add to cart" (clicked)="btnClicked()"></app-add-to-cart-btn>
+      <app-view-product-btn label="View Product" (clicked)="btnClicked()"></app-view-product-btn>
+    </div>
+
+  </div>
+</div>

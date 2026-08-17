@@ -7,6 +7,7 @@ mat-icon {
 
 *{
   scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
 @theme {
@@ -21,6 +22,7 @@ mat-icon {
   --color-light-orange: #fffbf4;
   --color-light-yellow: #fffded;
   --color-grey-olive: #aa9839;
+  --color-olive: #9ba216;
   --color-grey-orange: #b5996f;
   --color-light-grey: #e0e0de;
   --color-grey-brown: #79624b;
