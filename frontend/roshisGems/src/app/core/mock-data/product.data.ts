@@ -9,6 +9,7 @@ export const PRODUCTS: Product[] = [
     altText: "Green jhumka earrings",
     category: "hooks",
     isNew: true,
+    isWishlisted: false,
   },
   {
     id: 2,
@@ -18,15 +19,17 @@ export const PRODUCTS: Product[] = [
     altText: "Lotus design jhumka earrings",
     category: "hooks",
     isNew: true,
+    isWishlisted: false,
   },
   {
     id: 3,
     name: "Golden Pearl Jhumka",
     price: 299,
-    image: "/images/img3.jpeg",
+    image: "/images/img5.png",
     altText: "Golden pearl jhumka earrings",
     category: "hooks",
-    isNew: false,
+    isNew: true,
+    isWishlisted: false,
   },
   {
     id: 4,
@@ -36,6 +39,7 @@ export const PRODUCTS: Product[] = [
     altText: "Pink stone jhumka earrings",
     category: "hooks",
     isNew: true,
+    isWishlisted: false,
   },
   {
     id: 5,
@@ -44,7 +48,8 @@ export const PRODUCTS: Product[] = [
     image: "/images/bracelet.png",
     altText: "Traditional gold jhumka earrings",
     category: "hooks",
-    isNew: false,
+    isNew: true,
+    isWishlisted: false,
   },
   {
     id: 6,
@@ -54,6 +59,7 @@ export const PRODUCTS: Product[] = [
     altText: "Blue beaded jhumka earrings",
     category: "hooks",
     isNew: false,
+    isWishlisted: false,
   },
   {
     id: 7,
@@ -63,6 +69,7 @@ export const PRODUCTS: Product[] = [
     altText: "Red floral jhumka earrings",
     category: "hooks",
     isNew: false,
+    isWishlisted: false,
   },
   {
     id: 8,
@@ -72,6 +79,7 @@ export const PRODUCTS: Product[] = [
     altText: "Pearl drop jhumka earrings",
     category: "hooks",
     isNew: false,
+    isWishlisted: false,
   },
   {
     id: 9,
@@ -81,6 +89,7 @@ export const PRODUCTS: Product[] = [
     altText: "Silver oxidized jhumka earrings",
     category: "hooks",
     isNew: false,
+    isWishlisted: false,
   },
   {
     id: 10,
@@ -90,5 +99,6 @@ export const PRODUCTS: Product[] = [
     altText: "White stone jhumka earrings",
     category: "hooks",
     isNew: false,
+    isWishlisted: false,
   },
 ];

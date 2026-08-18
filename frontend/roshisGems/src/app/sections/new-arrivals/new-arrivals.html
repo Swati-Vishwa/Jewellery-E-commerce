@@ -1,15 +1,22 @@
-<section class="flex gap-5 pt-20">
-  <div class="flex flex-col gap-6">
-    <div class="w-full">
-      <h3 class="text-5xl font-alike font-medium">New Arrivals</h3>
-    </div>
-    <div class="flex justify-center gap-5">
-      @for (product of products(); track product.id) {
+<section class="flex flex-col justify-center items-center gap-7">
+  <div class="flex gap-5 pt-20">
+    <div class="flex flex-col gap-6">
+      <div class="w-full">
+        <h3 class="text-5xl font-alike font-medium">New Arrivals</h3>
+      </div>
+      <div class="flex justify-center gap-5">
+        @for (product of products(); track product.id) {
         <app-product-card [product]="product"></app-product-card>
-      }
+        }
+      </div>
+    </div>
+    <div>
+      <img src="/images/bracelet.png" alt="">
     </div>
   </div>
   <div>
-    <img src="/images/bracelet.png" alt="">
+    <a href="/" class="text-2xl underline underline-offset-4 text-grey-orange hover:text-grey-orange/70">View New Arrivals </a>
   </div>
 </section>
+
+<!-- (wishlistToggled)="onWishlistToggled($event)" -->
