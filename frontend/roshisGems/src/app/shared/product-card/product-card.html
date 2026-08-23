@@ -3,8 +3,9 @@
 
     <button 
       (click)="onWishlistClick()"
-      [class]="product().isWishlisted? 'bg-red-600' : 'bg-white'"
-      class="absolute z-10 border top-3 right-3 w-5 h-5 bg-white rounded-full">
+      [class]="isWishlisted() ? 'text-white' : 'text-red-600'"
+      class="absolute z-10 top-3 right-3 text-2xl">
+      <mat-icon>favorite</mat-icon>
     </button>
 
     <img 

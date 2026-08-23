@@ -6,10 +6,11 @@ import { ServicesSection } from "../../sections/services-section/services-sectio
 import { CollectionGrid } from "../../sections/collection-grid/collection-grid";
 import { FeatureBanner } from "../../sections/feature-banner/feature-banner";
 import { ProductSection } from "../../sections/product-section/product-section";
+import { Footer } from "../../layout/footer/footer";
 
 @Component({
   selector: 'app-home',
-  imports: [RouterOutlet, HeroBanner, Header, ServicesSection, CollectionGrid, FeatureBanner, ProductSection],
+  imports: [RouterOutlet, HeroBanner, Header, ServicesSection, CollectionGrid, FeatureBanner, ProductSection, Footer],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })

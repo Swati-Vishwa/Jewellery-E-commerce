@@ -7,5 +7,4 @@ export interface Product {
   altText: string;
   category: 'stud' | 'hoops' | 'hooks' | 'bracelet' | 'necklace';
   isNew: boolean;
-  isWishlisted?: boolean;
 }

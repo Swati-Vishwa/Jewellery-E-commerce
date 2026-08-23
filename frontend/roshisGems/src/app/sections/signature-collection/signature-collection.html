@@ -1,0 +1,32 @@
+<section class="flex flex-col justify-center items-center gap-7">
+  <div class="flex gap-5 pt-20">
+    <div class="flex flex-col gap-6">
+      <div class="w-full">
+        <h3 class="text-5xl font-alike font-medium">{{signatureColTitle()}}</h3>
+      </div>
+      <div class="grid grid-cols-3 gap-5">
+        @for (product of products(); track product.id) {
+        <app-product-card [product]="product" class="mb-6"></app-product-card>
+        }
+      </div>
+    </div>
+    
+    <div class="flex flex-col gap-4">
+      <div class="w-40 h-40 sm:w-56 sm:h-56 md:w-72 md:h-100 border-3 border-grey-orange rounded-tr-4xl rounded-bl-4xl overflow-hidden">
+        <img [src]="signatureCollectionOffer().image" [alt]="signatureCollectionOffer().altText"
+          class="w-full h-full object-cover object-[70%_40%]">
+      </div>
+      <div class="w-40 h-40 sm:w-56 sm:h-56 md:w-72 md:h-55 border-3 border-grey-orange rounded-tl-4xl rounded-br-4xl overflow-hidden">
+        <img [src]="signatureCollectionSpecials().image" [alt]="signatureCollectionSpecials().altText"
+          class="w-full h-full object-cover object-[70%_55%]">
+        </div>
+    </div>
+  </div>
+  <div>
+    <a 
+      href="/" 
+      class="text-2xl underline underline-offset-4 text-grey-orange hover:text-grey-orange/70">
+      View {{signatureColTitle()}}
+    </a>
+  </div>
+</section>

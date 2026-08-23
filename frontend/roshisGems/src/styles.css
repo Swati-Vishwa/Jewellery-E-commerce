@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Aboreto&family=Alike&family=Caveat&family=Bodoni+Moda:wght@400&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap");
 @import "tailwindcss";
+@import 'material-icons/iconfont/material-icons.css';
 
 mat-icon {
   font-family: 'Material Icons' ;
@@ -26,4 +27,5 @@ mat-icon {
   --color-grey-orange: #b5996f;
   --color-light-grey: #e0e0de;
   --color-grey-brown: #79624b;
+  --color-dark-grey: #1f1f1f;
 }

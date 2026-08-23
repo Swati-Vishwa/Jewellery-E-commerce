@@ -1,8 +1,7 @@
-import { Component, computed, inject } from '@angular/core';
+import { Component, computed, inject, signal } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { ProductCard } from "../../shared/product-card/product-card";
 import { ProductService } from '../../core/services/product.service';
-import { Product } from '../../core/models/product.model';
 
 @Component({
   selector: 'app-new-arrivals',
@@ -17,5 +16,11 @@ export class NewArrivals {
 
   products = computed(() => 
     this.allProducts().filter(p => p.isNew).slice(0, 3)
+  )
+
+  newArrivalTitle = signal<string>("New Arrivals")
+  newArrivalFeatureDetail = signal<{image: string, altText: string}>(
+    {image: "/images/Hydrangea-bracelet.png",
+    altText: "New Arrival feature image"}
   )
 }
