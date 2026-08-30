@@ -1,8 +1,8 @@
-<section class="w-full h-120 bg-dark-grey flex justify-center items-center">
-  <div class="w-4/5 h-4/5 flex items-center gap-10">
+<section id="contact" class="w-full h-fit pb-10 bg-dark-grey flex flex-col justify-center items-center">
+  <div class="w-4/5 h-4/5 flex items-center gap-10 mb-15">
 
     <div class="w-3/9 h-fit flex flex-col text-light-grey">
-      <div class="w-45"><img src="/images/logo.png" alt="" class="w-full h-full"></div>
+      <div class="w-49"><img src="/images/logo.png" alt="" class="w-full h-full"></div>
       <p class="relative bottom-8 text-lg">Our passion lies in creating meaningful jewelry that feels as unique as the
         people who wear it. Every design is handcrafted with care, using carefully selected materials and refined
         craftsmanship to bring beauty, quality, and authenticity to every piece.</p>
@@ -28,26 +28,26 @@
         </ul>
       </div>
 
-      <div class=" h-full flex flex-col text-light-grey p-0 gap-1">
-        <h4 class="text-grey-olive  text-xl font-semibold mb-2 underline underline-offset-8">Get in Touch</h4>
-        <p class="text-sm">{{Address()}}</p>
-        <a href="mailto:hello@roshisgems.com" class="text-sm hover:text-white transition-colors">{{businessEmail()}}</a>
-        <a href="tel:+911234567890" class="text-sm hover:text-white transition-colors">{{contactNumber()}}</a>
+      <div class=" h-full flex flex-col text-light-grey p-0 gap-2">
+        <h4 class="text-grey-olive text-xl font-semibold mb-3 underline underline-offset-8">Get in Touch</h4>
+        <p class="text-md flex items-center"><mat-icon>place</mat-icon>{{Address()}}</p>
+        <a href="mailto:hello@roshisgems.com" class="text-md hover:text-white transition-colors flex items-center"><mat-icon>email</mat-icon>{{businessEmail()}}</a>
+        <a href="tel:+911234567890" class="text-md hover:text-white transition-colors flex items-center"><mat-icon>phone</mat-icon>{{contactNumber()}}</a>
 
-        <ul class="flex gap-4 mt-4">
+        <ul class="flex gap-2 mt-4">
           <li>
-            <a href="#" aria-label="Instagram" class="hover:text-white transition-colors flex items-center">
-              <mat-icon>thumb_up</mat-icon>
+            <a href="#" aria-label="Instagram" class="hover:bg-white/20 p-1.5 transition-colors flex items-center">
+              <img src="/images/instagram.png" alt="" class="w-7">
             </a>
           </li>
           <li>
-            <a href="#" aria-label="Facebook" class="hover:text-white transition-colors flex items-center">
-              <mat-icon>thumb_up</mat-icon>
+            <a href="#" aria-label="Facebook" class="hover:bg-white/20 p-1.5 transition-colors flex items-center">
+              <img src="/images/facebook.png" alt="" class="w-7">
             </a>
           </li>
           <li>
-            <a href="#" aria-label="Pinterest" class="hover:text-white transition-colors flex items-center">
-              <mat-icon>push_pin</mat-icon>
+            <a href="#" aria-label="Pinterest" class="hover:bg-white/20 p-1.5 transition-colors flex items-center">
+              <img src="/images/pinterest.png" alt="" class="w-7">
             </a>
           </li>
         </ul>
@@ -56,5 +56,9 @@
 
     </div>
 
+  </div>
+  <div class="w-2/3">
+    <p class="border-t border-grey-orange text-light-grey/70 text-sm text-center pt-2">© 2026 Roshi's Gem. Celebrating artistry through handcrafted jewelry. All rights reserved.
+    </p>
   </div>
 </section>

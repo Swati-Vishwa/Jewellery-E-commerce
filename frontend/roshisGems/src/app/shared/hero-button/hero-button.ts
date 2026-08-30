@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, output, signal } from '@angular/core';
 
 @Component({
   selector: 'app-hero-button',
@@ -8,4 +8,10 @@ import { Component, signal } from '@angular/core';
 })
 export class HeroButton {
   heroBtnText = signal('View collection')
+
+  btnClick = output<void>()
+
+  onHeroBtnClick(){
+    this.btnClick.emit()
+  }
 }

@@ -2,10 +2,11 @@ import { Component, computed, inject, signal } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { ProductCard } from "../../shared/product-card/product-card";
 import { ProductService } from '../../core/services/product.service';
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-new-arrivals',
-  imports: [ProductCard],
+  imports: [ProductCard, RouterLink],
   templateUrl: './new-arrivals.html',
   styleUrl: './new-arrivals.css',
 })

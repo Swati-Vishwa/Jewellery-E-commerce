@@ -21,7 +21,8 @@ export class Footer {
     { name: 'Contact Us', routerLink: '/' },
     { name: 'Shipping & Returns', routerLink: '/' },
     { name: 'FAQ', routerLink: '/' },
-    { name: 'Jewelry Care', routerLink: '/' }
+    { name: 'Privacy', routerLink: '/' },
+    { name: 'Terms & Conditions', routerLink: '/' },
   ])
 
   Address = signal("123, address, uttar pradesh, India" )

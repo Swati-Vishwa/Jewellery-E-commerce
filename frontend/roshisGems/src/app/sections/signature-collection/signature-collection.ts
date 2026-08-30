@@ -2,10 +2,11 @@ import { Component, computed, inject, signal } from '@angular/core';
 import { ProductService } from '../../core/services/product.service';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { ProductCard } from "../../shared/product-card/product-card";
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-signature-collection',
-  imports: [ProductCard],
+  imports: [ProductCard, RouterLink],
   templateUrl: './signature-collection.html',
   styleUrl: './signature-collection.css',
 })

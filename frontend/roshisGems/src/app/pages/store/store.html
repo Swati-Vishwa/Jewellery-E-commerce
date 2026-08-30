@@ -1,0 +1,7 @@
+<section class="w-full h-dvh pt-40 bg-light-orange flex justify-center">
+  <app-header></app-header>
+  <div class="grid grid-cols-4 gap-5">
+    @for (product of products(); track product.id) {
+    <app-product-card [product]="product"></app-product-card> }
+  </div>
+</section>

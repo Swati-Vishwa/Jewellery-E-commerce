@@ -2,18 +2,21 @@
   <!-- Hero banner image -->
   <img [src]="HeroBannerImage()" [alt]="HeroBannerAlt()"
     class="absolute inset-0 top-0 left-0 h-full w-full object-cover object-[65%_30%] overflow-x-hidden">
-    
+
   <!-- overlay -->
   <div class="absolute inset-0 bg-black/20"></div>
 
   <!-- content -->
-  <div class="relative top-0 left-0 z-20 h-full pt-10 flex flex-col justify-center items-center">
-    <div class="flex flex-col items-center gap-16">
-      <h1 class="text-[110px] text-light-yellow font-aboreto uppercase">Timeless by Design.</h1>
-      <p class="text-3xl font-caveat text-light-grey">Timeless jewelry designed with intention, artistry, and exceptional
-        craftsmanship.</p>
-      <div class="">
-        <app-hero-button></app-hero-button>
+  <div class="relative top-0 left-0 z-20 h-full flex flex-col justify-center items-center">
+    <div class="flex flex-col items-center gap-10">
+      <div class="flex flex-col items-center">
+        <h1 class="text-[110px] text-light-yellow font-aboreto uppercase ">Timeless by Design.</h1>
+        <p class="text-3xl font-caveat text-light-grey">Timeless jewelry designed with intention, artistry, and
+          exceptional
+          craftsmanship.</p>
+      </div>
+      <div>
+        <app-hero-button (btnClick)="handleHeroBtnClick()"></app-hero-button>
       </div>
     </div>
   </div>

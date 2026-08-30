@@ -1,18 +1,18 @@
 <header class="fixed top-0 left-0 z-30 w-screen h-28 bg-light-orange shadow-md select-none">
   <nav class="w-full h-full flex justify-between items-center px-12">
     <ul class="flex gap-3 text-[28px] font-bold text-grey-olive font-cormorant">
-      <li class="nav-item">Home</li>
-      <li class="nav-item">About</li>
-      <li class="nav-item">Services</li>
-      <li class="nav-item">Contacts</li>
+      <li class="nav-item"><a [routerLink]="['/']">Home</a></li>
+      <li class="nav-item"><a [routerLink]="['/']" fragment="about">About</a></li>
+      <li class="nav-item"><a [routerLink]="['/store', 'signature-collection']">Store</a></li>
+      <li class="nav-item"><a [routerLink]="['/']" fragment="contact">Contacts</a></li>
     </ul>
 
     <img [src]="navLogoImg()" [alt]="navLogoAlt()" class="w-45 h-45 object-cover mr-70">
 
-    <ul class="flex gap-4 text-2xl font-bold text-grey-olive font-cormorant">
-      <li>❤️</li>
-      <li>🛒</li>
-      <li>🙍‍♀️</li>
-    </ul>
+    <div class="w-fit h-fit flex text-4xl justify-center items-center gap-4 text-grey-olive" >
+      <mat-icon class="text-4xl! w-11! h-11! text-center hover:bg-grey-olive/20 rounded-lg">favorite_border</mat-icon>
+      <mat-icon class="text-4xl! w-11! h-11! text-center hover:bg-grey-olive/20 rounded-lg">shopping_cart</mat-icon>
+      <mat-icon class="text-4xl! w-11! h-11! text-center hover:bg-grey-olive/20 rounded-lg">person_outline</mat-icon>
+    </div>
   </nav>
 </header>
