@@ -19,6 +19,11 @@ export class Store {
 
   private type = toSignal(this.route.paramMap, { initialValue: null })
 
+  pageTitle = computed(() => {
+    const currentType = this.type()?.get('type')
+    return currentType === 'new-arrivals'? 'New Arrivals' : 'Signature Collection'
+  })
+
   products = computed(() => {
     const currentType = this.type()?.get('type')
     const all = this.allProducts();
