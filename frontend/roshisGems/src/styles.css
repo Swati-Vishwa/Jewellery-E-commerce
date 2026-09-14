@@ -21,6 +21,7 @@ mat-icon {
 
 @theme {
   --color-light-orange: #fffbf4;
+  --color-medium-orange: #f4e6d7;
   --color-light-yellow: #fffded;
   --color-grey-olive: #aa9839;
   --color-olive: #9ba216;

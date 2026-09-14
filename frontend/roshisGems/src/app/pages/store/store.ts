@@ -4,10 +4,11 @@ import { ProductService } from '../../core/services/product.service';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { ProductCard } from "../../shared/product-card/product-card";
 import { ActivatedRoute } from '@angular/router';
+import { Footer } from "../../layout/footer/footer";
 
 @Component({
   selector: 'app-store',
-  imports: [Header, ProductCard],
+  imports: [Header, ProductCard, Footer],
   templateUrl: './store.html',
   styleUrl: './store.css',
 })

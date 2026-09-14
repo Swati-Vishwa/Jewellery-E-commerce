@@ -1,19 +1,104 @@
-<section class="w-full h-fit pt-40 bg-light-orange flex justify-evenly">
-  <div class="border">
-    <app-header></app-header>
-    <div class="w-3/4 h-20 border">hehe</div>
+<section class="w-full min-h-screen h-auto bg-light-orange">
+
+  <div class="grid-container relative w-full min-h-screen h-auto">
+    <!-- Navbar -->
+    <app-header class="header"></app-header>
+    
+    <!-- Bar below navbar -->
+    <div
+      class="nav-item sticky top-25 z-30 bg-medium-orange shadow rounded-2xl w-3/4 h-7 mx-auto flex justify-center items-center">
+      <ul class="flex gap-8 justify-center items-center font-alike">
+        <li class="hover:underline underline-offset-2">Home</li>
+        <li class="hover:underline underline-offset-2">Services</li>
+        <li class="hover:underline underline-offset-2">Collections</li>
+        <li class="hover:underline underline-offset-2">Contact</li>
+      </ul>
+    </div>
+    
+    <!-- Aside -->
+    <aside class="aside sticky top-40 bg-medium-orange w-70 h-120 mb-10 overflow-y-auto p-4 rounded-lg shadow-md">
+      <form class="space-y-6">
+    
+        <fieldset>
+          <legend class="font-bold text-gray-900 border-b pb-1 mb-3 w-full">Color</legend>
+          <div class="space-y-2">
+            <label class="flex items-center space-x-2 cursor-pointer">
+              <input type="checkbox" name="color" value="all" checked class="accent-amber-700">
+              <span class="text-sm text-gray-800">All Colors</span>
+            </label>
+            <label class="flex items-center space-x-2 cursor-pointer">
+              <input type="checkbox" name="color" value="gold" class="accent-amber-700">
+              <span class="text-sm text-gray-800">Gold</span>
+            </label>
+            <label class="flex items-center space-x-2 cursor-pointer">
+              <input type="checkbox" name="color" value="silver" class="accent-amber-700">
+              <span class="text-sm text-gray-800">Silver</span>
+            </label>
+            <label class="flex items-center space-x-2 cursor-pointer">
+              <input type="checkbox" name="color" value="rose-gold" class="accent-amber-700">
+              <span class="text-sm text-gray-800">Rose Gold</span>
+            </label>
+            <label class="flex items-center space-x-2 cursor-pointer">
+              <input type="checkbox" name="color" value="rose-gold" class="accent-amber-700">
+              <span class="text-sm text-gray-800">Blue</span>
+            </label>
+            <label class="flex items-center space-x-2 cursor-pointer">
+              <input type="checkbox" name="color" value="rose-gold" class="accent-amber-700">
+              <span class="text-sm text-gray-800">Green</span>
+            </label>
+          </div>
+        </fieldset>
+    
+        <fieldset>
+          <legend class="font-bold text-gray-900 border-b pb-1 mb-3 w-full">Jewelry Type</legend>
+          <div class="space-y-2">
+            <label class="flex items-center space-x-2 cursor-pointer">
+              <input type="checkbox" name="type" value="stud" class="rounded accent-amber-700">
+              <span class="text-sm text-gray-800">Stud</span>
+            </label>
+            <label class="flex items-center space-x-2 cursor-pointer">
+              <input type="checkbox" name="type" value="hoop" class="rounded accent-amber-700">
+              <span class="text-sm text-gray-800">Hoop</span>
+            </label>
+            <label class="flex items-center space-x-2 cursor-pointer">
+              <input type="checkbox" name="type" value="hook" class="rounded accent-amber-700">
+              <span class="text-sm text-gray-800">Hook</span>
+            </label>
+            <label class="flex items-center space-x-2 cursor-pointer">
+              <input type="checkbox" name="type" value="hook" class="rounded accent-amber-700">
+              <span class="text-sm text-gray-800">Jhumka</span>
+            </label>
+            <label class="flex items-center space-x-2 cursor-pointer">
+              <input type="checkbox" name="type" value="hook" class="rounded accent-amber-700">
+              <span class="text-sm text-gray-800">Braclets</span>
+            </label>
+            <label class="flex items-center space-x-2 cursor-pointer">
+              <input type="checkbox" name="type" value="hook" class="rounded accent-amber-700">
+              <span class="text-sm text-gray-800">Necklace</span>
+            </label>
+          </div>
+        </fieldset>
+    
+      </form>
+      </aside>
+    
+    <!-- Main -->
+    <main class="main overflow-hidden mb-20">
+      <div class="flex flex-col gap-6">
+        <h2 class="text-5xl font-alike font-medium">{{pageTitle()}}</h2>
+        <div class="grid grid-cols-3 gap-x-1 gap-y-15 pr-15">
+          @if (products().length === 0) {
+          <h2>No products found</h2>
+          } @else {
+          @for (product of products(); track product.id) {
+          <app-product-card [product]="product"></app-product-card>
+          }
+          }
+        </div>
+      </div>
+    </main>
   </div>
 
-  <aside class="fixed top-29 left-0 bg-amber-100 w-70 h-dvh border"></aside>
-  <div class="flex flex-col gap-6">
-    <h2 class="text-5xl font-alike font-medium">{{pageTitle()}}</h2>
-    <div class="grid grid-cols-3 gap-5">
-      @if (products().length === 0) {
-      <h2>No products found</h2>
-      }@else{
-      @for (product of products(); track product.id) {
-      <app-product-card [product]="product"></app-product-card> }
-      }
-    </div>
-  </div>
+  <app-footer class="footer"></app-footer>
+
 </section>
