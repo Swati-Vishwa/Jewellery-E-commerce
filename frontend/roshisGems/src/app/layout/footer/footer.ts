@@ -25,7 +25,30 @@ export class Footer {
     { name: 'Terms & Conditions', routerLink: '/' },
   ])
 
-  Address = signal("123, address, uttar pradesh, India" )
+  socialMediaIndo = signal([
+    {
+      iconImage: '/images/instagram.png',
+      href: 'https://www.instagram.com/roshi.sgems?stkn=ZDNlZDc0MzIxNw==',
+      altTxt: "Roshi's Gems Instagram handle",
+      ariaLabel: "Instagram"
+    },
+
+    {
+      iconImage: '/images/facebook.png',
+      href: 'https://www.instagram.com/roshi.sgems?stkn=ZDNlZDc0MzIxNw==',
+      altTxt: "Roshi's Gems facebook handle",
+      ariaLabel: "facebook"
+    },
+
+    {
+      iconImage: '/images/pinterest.png',
+      href: 'https://www.instagram.com/roshi.sgems?stkn=ZDNlZDc0MzIxNw==',
+      altTxt: "Roshi's Gems Pinterest handle",
+      ariaLabel: "Pinterest"
+    },
+  ])
+
+  Address = signal("123, address, uttar pradesh, India")
   businessEmail = signal('hello@roshisgems.com')
   contactNumber = signal('+91 12345 67890')
 }

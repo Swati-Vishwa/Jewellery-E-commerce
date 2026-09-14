@@ -31,25 +31,20 @@
       <div class=" h-full flex flex-col text-light-grey p-0 gap-2">
         <h4 class="text-grey-olive text-xl font-semibold mb-3 underline underline-offset-8">Get in Touch</h4>
         <p class="text-md flex items-center"><mat-icon>place</mat-icon>{{Address()}}</p>
-        <a href="mailto:hello@roshisgems.com" class="text-md hover:text-white transition-colors flex items-center"><mat-icon>email</mat-icon>{{businessEmail()}}</a>
-        <a href="tel:+911234567890" class="text-md hover:text-white transition-colors flex items-center"><mat-icon>phone</mat-icon>{{contactNumber()}}</a>
+        <a href="mailto:hello@roshisgems.com"
+          class="text-md hover:text-white transition-colors flex items-center"><mat-icon>email</mat-icon>{{businessEmail()}}</a>
+        <a href="tel:+911234567890"
+          class="text-md hover:text-white transition-colors flex items-center"><mat-icon>phone</mat-icon>{{contactNumber()}}</a>
 
         <ul class="flex gap-2 mt-4">
-          <li>
-            <a href="https://www.instagram.com/roshi.sgems?stkn=ZDNlZDc0MzIxNw==" target="_blank" aria-label="Instagram" class="hover:bg-white/20 p-1.5 transition-colors flex items-center">
-              <img src="/images/instagram.png" alt="" class="w-7">
-            </a>
-          </li>
-          <li>
-            <a href="#" aria-label="Facebook" class="hover:bg-white/20 p-1.5 transition-colors flex items-center">
-              <img src="/images/facebook.png" alt="" class="w-7">
-            </a>
-          </li>
-          <li>
-            <a href="#" aria-label="Pinterest" class="hover:bg-white/20 p-1.5 transition-colors flex items-center">
-              <img src="/images/pinterest.png" alt="" class="w-7">
-            </a>
-          </li>
+          @for (socialLink of socialMediaIndo(); track $index) {
+            <li>
+              <a [href]="socialLink.href" target="_blank"
+                [aria-label]="socialLink.ariaLabel" class="hover:bg-white/20 p-1.5 transition-colors flex items-center">
+                <img [src]="socialLink.iconImage" [alt]="socialLink.altTxt" class="w-7">
+              </a>
+            </li>
+          }
         </ul>
 
       </div>
@@ -58,7 +53,8 @@
 
   </div>
   <div class="w-2/3">
-    <p class="border-t border-grey-orange text-light-grey/70 text-sm text-center pt-2">© 2026 Roshi's Gem. Celebrating artistry through handcrafted jewelry. All rights reserved.
+    <p class="border-t border-grey-orange text-light-grey/70 text-sm text-center pt-2">© 2026 Roshi's Gem. Celebrating
+      artistry through handcrafted jewelry. All rights reserved.
     </p>
   </div>
 </section>
