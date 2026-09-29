@@ -1,9 +1,10 @@
-import { Component, computed, inject, input, output, signal } from '@angular/core';
+import { Component, computed, inject, input } from '@angular/core';
 import { AddToCartBtn } from "../add-to-cart-btn/add-to-cart-btn";
 import { ViewProductBtn } from "../view-product-btn/view-product-btn";
 import { Product } from '../../core/models/product.model';
 import { WishlistService } from '../../core/services/wishlist.service';
 import { MatIconModule } from '@angular/material/icon';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -13,6 +14,7 @@ import { MatIconModule } from '@angular/material/icon';
   styleUrl: './product-card.css',
 })
 export class ProductCard {
+  private router = inject(Router)
   product = input.required<Product>()
   private wishlistService = inject(WishlistService)
 
@@ -21,8 +23,12 @@ export class ProductCard {
   onWishlistClick(){
     this.wishlistService.toggle(this.product().id)
   }
-
-  btnClicked(){
-    alert("clicked")
+  
+  onAddToCart() {
+    console.log('Added to cart:', this.product().name);
+  }
+  
+  btnViewProduct(){
+    this.router.navigate(['/productView', this.product().id])
   }
 }

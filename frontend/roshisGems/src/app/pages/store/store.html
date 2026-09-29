@@ -3,7 +3,7 @@
   <div class="grid-container relative w-full min-h-screen h-auto">
     <!-- Navbar -->
     <app-header class="header"></app-header>
-    
+
     <!-- Bar below navbar -->
     <div
       class="nav-item sticky top-25 z-30 bg-medium-orange shadow rounded-2xl w-3/4 h-7 mx-auto flex justify-center items-center">
@@ -14,11 +14,12 @@
         <li class="hover:underline underline-offset-2">Contact</li>
       </ul>
     </div>
-    
+
     <!-- Aside -->
-    <aside class="aside sticky top-40 bg-medium-orange w-70 h-120 mb-10 overflow-y-auto p-4 rounded-lg shadow-md select-none">
+    <aside
+      class="aside sticky top-40 bg-medium-orange w-70 h-120 mb-10 overflow-y-auto p-4 rounded-lg shadow-md select-none">
       <form class="space-y-6">
-    
+
         <fieldset>
           <legend class="font-bold text-gray-900 border-b pb-1 mb-3 w-full">Color</legend>
           <div class="space-y-2">
@@ -48,7 +49,7 @@
             </label>
           </div>
         </fieldset>
-    
+
         <fieldset>
           <legend class="font-bold text-gray-900 border-b pb-1 mb-3 w-full">Jewelry Type</legend>
           <div class="space-y-2">
@@ -78,22 +79,22 @@
             </label>
           </div>
         </fieldset>
-    
+
       </form>
-      </aside>
-    
+    </aside>
+
     <!-- Main -->
     <main class="main overflow-hidden mb-20">
       <div class="flex flex-col gap-6">
         <h2 class="text-5xl font-alike font-medium">{{pageTitle()}}</h2>
         <div class="grid grid-cols-3 gap-x-1 gap-y-15 pr-15">
           @if (products().length === 0) {
-          <h2>No products found</h2>
+            <h2>No products found</h2>
           } @else {
-          @for (product of products(); track product.id) {
-          <app-product-card [product]="product"></app-product-card>
-          }
-          }
+              @for (product of products(); track product.id) {
+                <app-product-card [product]="product"></app-product-card>
+              }
+            }
         </div>
       </div>
     </main>
